@@ -1,21 +1,21 @@
 package src;
 
 import java.util.Scanner;
-public class Metereologia {
+public class Meteorologia {
 	private LS_NormalTemperatura temp;
 	private String fecha;
 	private int humedad;
 	private String viento;
 
 	
-	public Metereologia() {
+	public Meteorologia() {
 		temp = new LS_NormalTemperatura();
 		fecha = "";
 		humedad = 0;
 		viento = "";
 	}
 
-	public Metereologia(LS_NormalTemperatura temp, String fecha, int humedad, String viento) {
+	public Meteorologia(LS_NormalTemperatura temp, String fecha, int humedad, String viento) {
 		super();
 		this.temp = temp;
 		this.fecha = fecha;
@@ -37,7 +37,7 @@ public class Metereologia {
 	}
 	
 	public void mostrar() {
-		System.out.println("\t-* DATOS METEREOLOGICOS -*");
+		System.out.println("\t-* DATOS METEOROLOGIGOS -*");
 		System.out.println("Fecha: "+fecha);
 		System.out.println("\t-- Temperaturas registradas en este mes --");
 		temp.mostrar();

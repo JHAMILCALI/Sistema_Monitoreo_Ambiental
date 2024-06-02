@@ -27,7 +27,6 @@ public class DesastreNatural {
 	}
 	
 	public void mostrar() {
-		System.out.println("\t-* Desastres Naturales -*");
 		System.out.println("Tipo de Desastre Natural: "+tipoDesastre);
 		System.out.println("\t-- Rescates necesarios para el desastre de ["+tipoDesastre+"] --");
 		csr.mostrar();

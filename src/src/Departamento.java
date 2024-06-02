@@ -7,7 +7,7 @@ public class Departamento {
 	private  String codID;
 	private String clima;
 	private String nivelRiesgo;
-	private LD_NormalMetereologia met;
+	private LD_NormalMeteorologia met;
 	private LS_NormalPrevencionContaminacion LSprev;
 	private ColaCircularDesastreNatural DesastreNatural;
 
@@ -19,7 +19,7 @@ public class Departamento {
 		codID = "";
 		clima = "";
 		nivelRiesgo = "";
-		met = new LD_NormalMetereologia();
+		met = new LD_NormalMeteorologia();
 		LSprev = new LS_NormalPrevencionContaminacion();
 		DesastreNatural = new ColaCircularDesastreNatural();
 		
@@ -29,7 +29,7 @@ public class Departamento {
 
 
 	public Departamento(String nombre, String capital, double poblacion, String codID, String clima,
-			String nivelRiesgo, LD_NormalMetereologia met, LS_NormalPrevencionContaminacion lSprev, ColaCircularDesastreNatural desastreNatural) {
+			String nivelRiesgo, LD_NormalMeteorologia met, LS_NormalPrevencionContaminacion lSprev, ColaCircularDesastreNatural desastreNatural) {
 		super();
 		this.nombre = nombre;
 		this.capital = capital;
@@ -84,6 +84,7 @@ public class Departamento {
 		System.out.println("---------------------------------------------------------------------------------");
 		LSprev.mostrar();
 		System.out.println("---------------------------------------------------------------------------------");
+		System.out.println("\t\t-* Desastres Naturales -*");
 		DesastreNatural.mostrar();
 		System.out.println("---------------------------------------------------------------------------------");
 		System.out.println();
@@ -149,12 +150,12 @@ public class Departamento {
 	}
 
 
-	public LD_NormalMetereologia getMet() {
+	public LD_NormalMeteorologia getMet() {
 		return met;
 	}
 
 
-	public void setMet(LD_NormalMetereologia met) {
+	public void setMet(LD_NormalMeteorologia met) {
 		this.met = met;
 	}
 

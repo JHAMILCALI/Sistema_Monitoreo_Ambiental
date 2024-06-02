@@ -61,7 +61,7 @@ public class ColaSimpleGobierno extends ColaGobierno{
 	public void mostrar() {
 		ColaSimpleGobierno aux = new ColaSimpleGobierno();
 		Gobierno x = new Gobierno() ;
-		System.out.println("\t-* Gobierno -*");
+		System.out.println("\t\t-* Gobierno -*");
 		while(!esVacia()) {
 			x = eli();
 			x.mostrar();

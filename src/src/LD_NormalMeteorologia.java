@@ -1,7 +1,7 @@
 package src;
 
-public class LD_NormalMetereologia extends ListaDobleMetereologia{
-	public LD_NormalMetereologia() {
+public class LD_NormalMeteorologia extends ListaDobleMeteorologia{
+	public LD_NormalMeteorologia() {
 		super();
 	}
 	boolean esVacia() {
@@ -11,15 +11,15 @@ public class LD_NormalMetereologia extends ListaDobleMetereologia{
 	}
 	int nroNodos() {
 		int c = 0;
-		NodoMetereologia R = this.P;
+		NodoMeteorologia R = this.P;
 		while(R != null) {
 			c++;
 			R = R.getSig();
 		}
 		return c;
 	}
-	void adiPrimero(Metereologia z){
-		NodoMetereologia nuevo = new NodoMetereologia();
+	void adiPrimero(Meteorologia z){
+		NodoMeteorologia nuevo = new NodoMeteorologia();
 		nuevo.setMetereologia(z);
 		if(esVacia())
 			P = nuevo;
@@ -30,20 +30,20 @@ public class LD_NormalMetereologia extends ListaDobleMetereologia{
 		}
 	}
 	void mostrar() {
-		NodoMetereologia R = P;
+		NodoMeteorologia R = P;
 		while(R != null) {
 			R.getMetereologia().mostrar();
 			System.out.println("");
 			R = R.getSig();
 		}
 	}
-	void adiFinal(Metereologia z) {
-		NodoMetereologia nuevo =  new NodoMetereologia();
+	void adiFinal(Meteorologia z) {
+		NodoMeteorologia nuevo =  new NodoMeteorologia();
 		nuevo.setMetereologia(z);
 		if(esVacia())
 			P = nuevo;
 		else {
-			NodoMetereologia R = P;
+			NodoMeteorologia R = P;
 			while(R.getSig() != null) {
 				R = R.getSig();
 			}
@@ -52,8 +52,8 @@ public class LD_NormalMetereologia extends ListaDobleMetereologia{
 		}
 	}
 	
-	NodoMetereologia eliPrimero() {
-		NodoMetereologia x = new NodoMetereologia();
+	NodoMeteorologia eliPrimero() {
+		NodoMeteorologia x = new NodoMeteorologia();
 		if(!esVacia()) {
 			if(nroNodos() == 1) {
 				x = P;
@@ -68,19 +68,19 @@ public class LD_NormalMetereologia extends ListaDobleMetereologia{
 		return x;
 	}
 	
-	NodoMetereologia eliFinal() {
-		NodoMetereologia x = new NodoMetereologia();
+	NodoMeteorologia eliFinal() {
+		NodoMeteorologia x = new NodoMeteorologia();
 		if(!esVacia()) {
 			if(nroNodos() == 1) {
 				x = P;
 				P = null;
 			}else {
-				NodoMetereologia R = P;
+				NodoMeteorologia R = P;
 				while(R.getSig() != null) {
 					R = R.getSig();
 				}
 				x = R;
-				NodoMetereologia aux = R.getAnt();
+				NodoMeteorologia aux = R.getAnt();
 				aux.setSig(null);
 				x.setAnt(null);
 			}
@@ -91,7 +91,7 @@ public class LD_NormalMetereologia extends ListaDobleMetereologia{
 	void leer1(int n) {
 		System.out.println("Metereologia...");
 		for (int i = 1; i <= n; i++) {
-			Metereologia z = new Metereologia();
+			Meteorologia z = new Meteorologia();
 			z.leer();
 			adiPrimero(z);
 		}
@@ -100,7 +100,7 @@ public class LD_NormalMetereologia extends ListaDobleMetereologia{
 	void leer2(int n) {
 		System.out.println("Metereologia...");
 		for (int i = 1; i <= n; i++) {
-			Metereologia z = new Metereologia();
+			Meteorologia z = new Meteorologia();
 			z.leer();
 			adiFinal(z);
 		}
